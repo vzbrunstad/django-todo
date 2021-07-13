@@ -1,0 +1,23 @@
+<h1>Lists</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Pages</th>
+      <!-- <th>View</th>
+      <th>Edit</th>
+      <th>Delete</th> -->
+    </tr>
+  </thead>
+  <tbody>
+    {% for book in all_lists %}
+      <tr>
+        <td>{{ book.title }}</td>
+        <td>{{ book.description }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<a href="{% url 'lists:list_new' %}">New</a>
